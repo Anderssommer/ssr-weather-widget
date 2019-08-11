@@ -1,0 +1,1 @@
+export const appid = 'APP_ID_HERE';

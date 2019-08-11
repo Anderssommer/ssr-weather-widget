@@ -1,0 +1,90 @@
+{
+    "name": "ssr-weather-widget",
+    "version": "1.0.0",
+    "description": "Server side rendering weather widget",
+    "main": "index.js",
+    "scripts": {
+        "dev": "npm-run-all --parallel dev:*",
+        "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
+        "dev:build-server": "webpack --config webpack.server.js --watch",
+        "dev:buil-client": "webpack --config webpack.client.js --watch",
+        "test": "jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@babel/core": "7.5.5",
+        "@babel/polyfill": "7.4.4",
+        "@babel/preset-env": "7.5.5",
+        "@babel/preset-react": "7.0.0",
+        "axios": "0.19.0",
+        "babel-cli": "6.26.0",
+        "babel-core": "6.26.3",
+        "babel-jest": "24.8.0",
+        "babel-loader": "8.0.6",
+        "babel-preset-react-app": "9.0.0",
+        "enzyme": "3.10.0",
+        "enzyme-adapter-react-16": "1.14.0",
+        "express": "4.17.1",
+        "jest": "24.8.0",
+        "moxios": "0.4.0",
+        "nodemon": "1.19.1",
+        "npm-run-all": "4.1.5",
+        "query-string": "6.8.2",
+        "react": "16.9.0",
+        "react-app-polyfill": "1.0.2",
+        "react-dom": "16.9.0",
+        "react-redux": "7.1.0",
+        "react-router": "5.0.1",
+        "react-router-config": "5.0.1",
+        "react-router-dom": "5.0.1",
+        "react-test-renderer": "16.9.0",
+        "redux": "4.0.4",
+        "redux-mock-store": "1.5.3",
+        "redux-thunk": "2.3.0",
+        "serialize-javascript": "1.7.0",
+        "styled-components": "4.3.2",
+        "supertest": "4.0.2",
+        "uuid": "3.3.2",
+        "webpack": "4.39.1",
+        "webpack-cli": "3.3.6",
+        "webpack-dev-server": "3.7.2",
+        "webpack-merge": "4.2.1",
+        "webpack-node-externals": "1.7.2"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx}"
+        ],
+        "resolver": "jest-pnp-resolver",
+        "setupFiles": [
+            "react-app-polyfill/jsdom",
+            "<rootDir>/src/client/setupTests.js"
+        ],
+        "testMatch": [
+            "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+            "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+        ],
+        "testEnvironment": "jsdom",
+        "testURL": "http://localhost",
+        "transform": {
+            "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest"
+        },
+        "transformIgnorePatterns": [
+            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+            "^.+\\.module\\.(css|sass|scss)$"
+        ],
+        "moduleFileExtensions": [
+            "web.js",
+            "js",
+            "web.ts",
+            "ts",
+            "web.tsx",
+            "tsx",
+            "json",
+            "web.jsx",
+            "jsx",
+            "node"
+        ]
+    }
+}
