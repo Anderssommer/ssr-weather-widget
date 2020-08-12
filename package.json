@@ -42,7 +42,7 @@
         "redux": "4.0.4",
         "redux-mock-store": "1.5.3",
         "redux-thunk": "2.3.0",
-        "serialize-javascript": "1.7.0",
+        "serialize-javascript": "3.1.0",
         "styled-components": "4.3.2",
         "supertest": "4.0.2",
         "uuid": "3.3.2",
